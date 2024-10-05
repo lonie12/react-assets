@@ -1,1 +1,1 @@
-import { toCamelCase } from "./utils.js";
+import { toCamelCase } from './utils.js';
