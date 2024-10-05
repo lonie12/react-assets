@@ -1,11 +1,12 @@
 {
-  "name": "react-assets",
+  "name": "react-asset",
   "version": "1.0.1",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "dev": "vitest",
     "test": "vitest run",
+    "start": "node dist/index.js",
     "prepublishOnly": "npm run ci",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
@@ -13,9 +14,12 @@
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "ci": "npm run build && npm run check-format && npm run check-exports && npm run test"
   },
+  "bin": {
+    "react-asset": "dist/index.js"
+  },
   "author": "Lonie Rachid <rbatoulime@gmail.com>",
   "license": "MIT",
-  "description": "react-assets is a react package use to generate constants variables for assets files in react public folder",
+  "description": "react-asset is a react package use to generate constants variables for assets files in react public folder",
   "keywords": [
     "assets",
     "react",
