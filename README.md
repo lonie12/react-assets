@@ -1,4 +1,4 @@
-# react-asset v1.1.0
+# react-asset v1.1.1
 
 `react-asset` is a React package designed to automatically generate constant variables for asset files located in the public folder of a React project.
 
@@ -21,7 +21,7 @@ $ npm i --save-dev react-asset
 To execute the **`react-asset`** package:
 
 **1.** Ensure that you have a **`public`** folder containing your asset files.
-**2.** Run the following command in your project folder:
+**2.** Run the following command in the root of your project:
 
 ```shell
 

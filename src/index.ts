@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import { readdirSync, writeFileSync } from 'fs';
+import { readdirSync, writeFileSync, closeSync, openSync } from 'fs';
 import { assetPath, publicPath } from './constants.js';
 import { folderExists, isFile, nameVariable } from './utils.js';
 
-writeFileSync(`${assetPath}/assets.ts`, '', 'utf-8');
+closeSync(openSync(`${assetPath}assets.ts`, 'w'));
 
 // Generate assets
 if (folderExists(publicPath) && folderExists(assetPath)) {
