@@ -1,12 +1,15 @@
 {
   "name": "react-assets",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "ci": "npm run build",
+    "dev": "vitest",
+    "test": "vitest run",
     "format": "prettier --write .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check-format": "prettier --check .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "ci": "npm run build && npm run check-format && npm run check-exports && npm run test"
   },
   "author": "Lonie Rachid <rbatoulime@gmail.com>",
   "license": "MIT",
@@ -29,7 +32,9 @@
   ],
   "type": "module",
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.16.4",
     "prettier": "^3.3.3",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.2"
   }
 }
